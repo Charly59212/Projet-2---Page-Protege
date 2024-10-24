@@ -1,0 +1,288 @@
+/*-----------Body-----------*/
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(150deg, #9394bd, #c9a1c2);
+}
+
+/*---------Header---------*/
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/*------Nav Links-------*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    border-color: rgb(245, 179, 57);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/*-------Container-------*/
+h1 {
+    font-family: "Oxanium", sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(4, 48, 48);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main {
+    flex: 1;
+    margin-top: 145px;
+    padding: 20px;
+}
+
+main p {
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+}
+
+.autonom {
+    font-family: "Oxanium", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(85, 60, 228);
+    line-height: 5px;
+}
+
+/*-------Exclusive content-----------*/
+.intro {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.intro p {
+    font-weight: 700;
+}
+
+.btn-connect {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-connect:hover {
+    background-color: #555;
+    border-color: #fff;
+}
+
+/*------Login form-------*/
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    min-height: 100%;
+}
+
+.form-container h2 {
+    margin-top: 18vh;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-container #bio_button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-container #bio_button:hover {
+    background-color: #555;
+}
+
+/*-------Error message---------*/
+.error-message {
+    color: red;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/*----Bouton scroll to top-----*/
+#scroll-to-top {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    padding: 2px 10px;
+    color: rgb(65, 63, 63);
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.479);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: white;
+    color: black;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*------Footer-------*/
+footer {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/*-----Pictures------*/
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border: 2px solid rgb(245, 179, 57);
+    border-radius: 8px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeZoom 2s ease forwards;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/*----Animation of pictures----*/
+@keyframes fadeZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*-----------Bio---------*/
+#logo {
+    text-align: center;
+}
+
+.modele {
+    width: 100%;
+}
+
+/*-----Media Queries------*/
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 21px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        padding: 5px 5px;
+    }
+
+    main {
+        margin-top: 115px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gallery {
+        display: block;
+    }
+
+}
